@@ -13,11 +13,13 @@ class SourcesScreenState extends State<BySourcesScreen> {
 
   void getSources() {
     newsApiClient.fetchSources().then((value) {
-      for (int i = 0; i < value.length; i++) {
+      setState(() {
+        for (int i = 0; i < value.length; i++) {
 //        print("value is " + value.elementAt(i).name);
-        sources[value.elementAt(i).id] = value.elementAt(i).name;
-        print("source is " + sources[value.elementAt(i).id]);
-      }
+          sources[value.elementAt(i).id] = value.elementAt(i).name;
+          print("source is " + sources[value.elementAt(i).id]);
+        }
+      });
     });
   }
 

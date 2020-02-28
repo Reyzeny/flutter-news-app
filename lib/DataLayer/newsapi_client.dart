@@ -8,7 +8,7 @@ import 'package:meta/meta.dart';
 import 'package:newsapp/DataLayer/Sources.dart';
 
 class NewsApiClient {
-  final apiKey = "YOUR-API-KEY";
+  final apiKey = "YOUR-API-KEY-HERE";
   final host = "newsapi.org";
   final version = "v2";
 
